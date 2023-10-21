@@ -14,6 +14,6 @@ const TasksSchema = new mongoose.Schema({
     }
 })
 
-const Tasks = mongoose.model('Tasks', TasksSchema);
+const Task = mongoose.model('Tasks', TasksSchema);
 
-module.exports = Tasks;
+module.exports = Task;

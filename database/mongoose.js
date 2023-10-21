@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 mongoose.Promise = global.Promise;
 
-const connectDB = mongoose.connect(`mongodb+srv://marianwadia55:sX8BbeU6kSVymJr5@taskmanager.epqab80.mongodb.net/TaskManager?retryWrites=true&w=majority`, {
+const connectDB = mongoose.connect(process.env.DATABASE_URI, {
     useNewUrlParser: true,
 }).then(()=>{
     console.log('connected successfully to database');
